@@ -32,7 +32,9 @@ runs:
         workflow_helper\iTunesInstall\install_itunes.bat
       working-directory: ${{ github.action_path }}
       shell: cmd
-    
+    - name: Python Version
+      run: |
+        python --version
     - name: Setup Python Dependencies
       if: ${{ env.NEED_INIT == 1 }}
       run: |
