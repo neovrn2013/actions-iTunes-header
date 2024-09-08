@@ -72,7 +72,8 @@ runs:
       run: |
         echo Start Frida Header Server!
         curl -Lo psexec64.exe https://github.com/ComputerGuyYash/psexec/raw/main/PsExec64.exe
-        psexec64.exe -accepteula -nobanner -i -d cmd /c "python3.exe workflow_helper/iTunesDownload/get_header.py > C:\get_header.log 2>&1"
+        psexec64.exe -accepteula -nobanner -i -d cmd /c "python3.exe workflow_helper/iTunesDownload/get_header.py"
+        #psexec64.exe -accepteula -nobanner -i -d cmd /c "python3.exe workflow_helper/iTunesDownload/get_header.py > C:\get_header.log 2>&1"
         exit 0
       working-directory: ${{ github.action_path }}
       shell: cmd
